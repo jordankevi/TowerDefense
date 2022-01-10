@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS && jQuery modal -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<title>Tower Defense - MMI 2021</title>
+  </head>
+  <body>
+	<div id="menu">
+		<button onclick="chooseDifficulty();" >Play</button>
+		<button onclick="displayScoreBoard();">Highscore</button>
+	</div>
+	<div id="game-div" class="container-fluid" style="display:none;">
+		<div class="col-md-12">
+			<div class="game">
+				<div id="areaTowers"></div>
+				<div class="infos">
+						<div class="row">
+							<div class="col-md-3"><span class="life"></span> <img src="./resources/coeur_plein_rouge.svg" alt="Coeur" class="heart img-fluid"></div>
+							<div class="col-md-3"><span class="money"></span> <img src="./resources/billet.svg" alt="Billet" class="diamond img-fluid"></div>
+							<div class="col-md-3">Level <span class="level"></span></div>
+							<div class="col-md-3"><span class="time"></span> sec</div>
+						</div>
+				</div>
+
+				<div class="follow-tower">
+					<div class="area"></div>
+					<img src="" alt="Tour">
+					<div class="type"><p></p></div>
+				</div>
+
+				<div class="towers"></div>
+
+				
+			</div>
+		</div>
+
+		<div class="game-constructor">
+			<div class="row all-towers">
+			</div>
+			
+			<div class="game-commands"></div>
+		</div>
+	</div>
+	<div class="modals">
+		<div id="high_score" class="modal">
+			<p>Ton score est de <span class="score"></span></p>
+			Rentre ton pseudo pour enregistrer ton score.
+			<input type="text" id="pseudo" placeholder="Ton pseudo">
+			<button onclick="submit_score();">OK</button>
+		</div>
+		<div id="difficulty" class="modal">
+			<p>Quelle difficulté veux-tu choisir ?</p><br>
+			<button onclick="initGame(0.5);">Facile</button>
+			<button onclick="initGame(1);">Moyen</button>
+			<button onclick="initGame(2);">Difficile</button>
+			<button onclick="initGame(100);">Impossible</button>
+		</div>
+		<div id="high_score_display" class="modal">
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<script src="js/highscore.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/vagues.js"></script>
+	<script src="js/path.js"></script>
+	<script src="js/towers.js"></script>
+	<script src="js/monsters.js"></script>
+	<script src="js/player.js"></script>
+	<script src="js/game.js"></script>
+  </body>
+</html>

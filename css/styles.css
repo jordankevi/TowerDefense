@@ -1,0 +1,193 @@
+body {
+	background-color: #014630;
+	z-index: -1;
+}
+
+#menu {
+	display: flex;
+	align-items: center;
+	background: linear-gradient(180deg, #386cb0 0%, white 100%);
+	background-image: url("../resources/background.png");
+	background-size: 100% 100%;
+	z-index: -2;
+	justify-content: center;
+	height: 100vh;
+}
+
+
+button {
+	border: 0;
+	background: transparent;
+	z-index: 1;
+	color: white;
+	position: relative;
+	overflow: hidden;
+	padding: 25px 80px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 1.5em;
+	transition: all .2s;
+	margin-top: 200px;
+	margin-right: 10px;
+}
+
+button::after {
+	content: "";
+	width: 500px;
+	height: 500px;
+	background: linear-gradient(225deg, #000000 0%, #6a4581 50%, #000000 100%);
+	position: absolute;
+	top: -50px;
+	left: -100px;
+	transition: all .9s;
+	z-index: -1;
+}
+
+button:hover::after {
+	transform: rotate(180deg);
+	z-index: -1;
+}
+
+.container-fluid {
+	margin: 0px;
+	padding: 0px;
+}
+
+.game {
+	z-index: -5;
+	background-image: url('../resources/background_game.svg')
+}
+
+.game .infos {
+	display: block;
+	position: fixed;
+	width: 300px;
+	height: 50px;
+	right: 0px;
+	background-color: rgba(100,100,100,0.3);
+	z-index: 1;
+	text-align: center;
+}
+
+.game .infos img.heart {
+	max-height: 25px;
+}
+
+.game .infos img.diamond {
+	max-height: 20px;
+	margin-top: -10px;
+}
+
+.game .tower, .game .follow-tower, .game .monster {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	z-index: 1;
+	text-align: center;
+}
+
+.game .tower img, .game .follow-tower img, .game .monster img {
+	width: 60px;
+	height: 60px;
+}
+
+.game .monster .progress-bar {
+	margin-top: 5px;
+}
+
+.game .monster .progress-bar.target {
+	background-color: green;
+}
+
+.game .monster .money {
+	text-align: center;
+	display: none;
+}
+
+.game .area {
+	display: none;
+	position: absolute;
+	background-color: rgba(100,100,100,0.1);
+	z-index: 0;
+}
+
+.game .follow-tower {
+	display: none;
+}
+
+.game .follow-tower .area {
+	display: block;
+}
+
+.game .shot {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.game .path {
+	position: absolute;
+	z-index:0;
+	cursor: not-allowed;
+}
+
+.game .path div {
+	position: absolute;
+	background-color: #b87306;
+	opacity: 1;
+}
+
+.game .path .monsters .monster{
+	background-color: rgba(0,0,0,0);
+}
+
+.game-constructor {
+	width: 100%;
+	height: 150px;
+	position: fixed;
+	bottom: 0px;
+	background-color: rgba(255,255,255,0.9);
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+}
+
+.game-constructor .tower img.tower {
+	max-height: 70px;
+}
+
+.game-constructor .tower img.diamond {
+	max-height: 20px;
+}
+
+.game-constructor .tower.disabled {
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+.game-constructor .infos {
+    margin-top: -200px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.9);
+    display: none;
+}
+
+.game-constructor .infos p {
+	font-size: 11pt;
+}
+
+#house {
+	background-image: url('../resources/Maison.svg');
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+#school {
+	background-image: url("../resources/Iut.svg");
+	background-repeat: no-repeat;
+}
