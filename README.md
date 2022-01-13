@@ -36,7 +36,3 @@
     - Pour faire apparaître la tour sous son curseur pour en créer une, il faudra au préalable survoler le chemin. Il faudrait que ce soit le cas dès la pression du clique de souris
     - Parfois les tours cessent de tirer sur les ennemis et ne tirent plus par la suite
 
-
-### Conclusion
-    Il s'agit d'un projet intérressant car il nous a permis de nous poser des questions tout au long du codage. Ces questions nous ont alors menées vers des méthodes efficaces qui nous ont permis de codé le jeu comme il se doit.
-    Pour certains ce projet était sympa mais par manque de temps beaucoup de beugs subsistent sans pour autant savoir pourquoi. C'est pour cela que ces mêmes personnes souhaite et vont continuer de travailler dessus afin d'avoir un rendu plaisant pour leur portefolio.
